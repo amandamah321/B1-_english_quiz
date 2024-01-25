@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: #1f1f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    height: 65%;
+    background-color: #e0e0e1;
+    border: 2px solid #1f1f2f;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionMark {
+    color: #c94c4c;
+    font-size: 8rem;
+    -webkit-text-stroke-width: 3px; 
+    -webkit-text-stroke-color: black;
+    animation: rotating 20s infinite linear;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.questions__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.question {
+    font-size: 24px;
+    text-align: center;
+}
+
+.answers__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.answers:disabled {
+    cursor: not-allowed;
+}
+
+.next__question {
+    margin-top: 32px;
+}
+
+.button {
+    color: black;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 48px;
+    padding: 0 32px;
+    transition: filter 0.1s;
+}
+
+.button:not(:disabled):hover {
+    color: rgba(237, 112, 2, 0.697);
+    transform: scale(1.02);
+}
+
+.controls__container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.controls__container button {
+    width: 100%;
+    margin-top: 20px;
+    background: rgba(237, 112, 2, 0.697)
+}
+
+/****the end****/
+
+.final__message {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+.final__message span {
+    display: block;
+    margin-top: 8px;
+}
+  
+  /* General styles */
+
+.hide {
+    display: none;
+}
+  
+.correct {
+    background-color: #32aa68c5;
+}
+  
+.incorrect {
+    background-color: #ab2525b4;
+}
+
+.ScoreMessage {
+    font-size: 3rem;
+}
+
+.finalMessage {
+    color: #c94c4c;
+    font-size: 1.5rem;
+}
+
+
+@keyframes rotating {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    } 
+    50% {
+        transform: rotateX(0deg) rotateY(1800deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    }
+}
