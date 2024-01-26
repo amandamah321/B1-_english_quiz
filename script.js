@@ -6,6 +6,7 @@ const questionEl = document.querySelector(".question");
 const questionMarkEl = document.querySelector(".questionMark");
 const answerEl = document.querySelector(".answer");
 const next__questionEl = document.querySelector(".next__question");
+const scoreEl = document.querySelector(".score");
 
 
 let currentQuestionIndex = 0
@@ -32,7 +33,6 @@ function displayNextQuestion() {
     }
 
 
-
     questionEl.textContent = questions[currentQuestionIndex].question
     questions[currentQuestionIndex].answers.forEach(answers => {
         const newAnswer = document.createElement("button")
@@ -46,6 +46,14 @@ function displayNextQuestion() {
         newAnswer.addEventListener('click' , selectAnswer)
     })
 
+    displayScore()
+
+}
+
+function displayScore() {
+
+    scoreEl.innerHTML = `${currentQuestionIndex + 1} / ${questions.length}`
+    
 }
 
 function resetState() {
@@ -102,6 +110,8 @@ function finishGame() {
         default:
         message = "Sorry, Your English level is A1/A2"
     }
+
+    scoreEl.remove();
 
     questionMarkEl.style.fontSize = "8rem";
 
