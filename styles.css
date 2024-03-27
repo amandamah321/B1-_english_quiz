@@ -12,24 +12,26 @@ button {
 body {
     width: 100vw;
     height: 100vh;
-    color: #1f1f2f;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/assets/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
     width: 90%;
     max-width: 800px;
-    height: 65%;
-    background-color: #e0e0e1;
-    border: 2px solid #1f1f2f;
+    border: 2px solid rgb(26, 72, 26);
     border-radius: 10px;
     padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(91, 141, 91, 0.563);
 }
 
 .score {
@@ -37,17 +39,17 @@ body {
     text-align: right;
     margin-right: 20px;
     font-size: 2rem;
-    color: #c94c4c;
+    color: rgb(26, 72, 26);
     -webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: black;
 }
 
 .questionMark {
-    color: #c94c4c;
+    color: rgb(26, 72, 26);
     font-size: 8rem;
     -webkit-text-stroke-width: 3px; 
-    -webkit-text-stroke-color: black;
-    animation: rotating 20s infinite linear;
+    -webkit-text-stroke-color: rgb(1, 35, 7);
+    animation: rotating 10s infinite linear;
     user-select: none;
     margin-bottom: 10px;
 }
@@ -58,11 +60,15 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    margin-top: 1rem;
+    color: #fff;
 }
 
 .question {
     font-size: 24px;
     text-align: center;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px black;
 }
 
 .answers__container {
@@ -73,12 +79,19 @@ body {
     margin-top: 50px;
 }
 
+.title {
+    text-align: center;
+    color: #fff;
+    -webkit-text-stroke: 1px black;
+}
+
 .answers:disabled {
     cursor: not-allowed;
 }
 
 .next__question {
-    margin-top: 32px;
+    margin-top: 20px;
+    color: black;
 }
 
 .button {
@@ -92,7 +105,7 @@ body {
 }
 
 .button:not(:disabled):hover {
-    color: rgba(237, 112, 2, 0.697);
+    color: black;
     transform: scale(1.02);
 }
 
@@ -104,7 +117,7 @@ body {
 .controls__container button {
     width: 100%;
     margin-top: 20px;
-    background: rgba(237, 112, 2, 0.697)
+    background: rgb(26, 72, 26);
 }
 
 /****the end****/
@@ -124,11 +137,11 @@ body {
 }
   
 .correct {
-    background-color: #32aa68c5;
+    background-color: rgb(61, 113, 61);
 }
   
 .incorrect {
-    background-color: #ab2525b4;
+    background-color: #e70a0ab4;
 }
 
 .ScoreMessage {
@@ -136,20 +149,25 @@ body {
 }
 
 .finalMessage {
-    color: #c94c4c;
-    font-size: 1.5rem;
+    color: #fff;
+    -webkit-text-stroke: 1px black;
+    font-size: 2rem;
     text-align: center;
+}
+
+.link {
+    color: black;
 }
 
 
 @keyframes rotating {
     0% {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform: rotate(0deg);
     } 
     50% {
-        transform: rotateX(0deg) rotateY(1800deg) rotateZ(0deg);
+        transform: rotate(160deg);
     }
     100% {
-        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+        transform: rotate(360deg);
     }
 }

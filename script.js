@@ -99,16 +99,16 @@ function finishGame() {
     let message = ""
 
     switch (true) {
-        case (performance >= 85):
-            message = "Excellent, your English level is B1+ !"
+        case (performance >= 60):
+            message = "Excellent, you know a lot about recycling and environment !"
             break;
     
-        case (performance >= 60):
-            message = "Good, your English level is B1 !"
+        case (performance >= 40):
+            message = "Your knowledge is ok, but you should study a bit more !"
             break;
 
         default:
-        message = "Sorry, Your English level is A1/A2"
+        message = "Study about recycling and environment !"
     }
 
     scoreEl.remove();
@@ -124,6 +124,9 @@ function finishGame() {
         <span class="finalMessage">${message}</span>
         <br>
         <button  class="button" onclick= window.location.reload()>Start Over</button>
+        <p>
+        <a class='link' href="https://www.greenpeace.org/usa/">Learn more about recycling</a>
+        </p>
     `
 }
 
@@ -131,93 +134,66 @@ function finishGame() {
 
 const questions = [
     {
-        question: "She's married and she has three ____.",
+        question: "How long does it take for a plastic bottle to decompose?",
         answers: [
-            { text: "childs", correct: false },
-            { text: "children", correct: true },
-            { text: "child", correct: false },
-            { text: "kid", correct: false }
+            { text: "300 years", correct: false },
+            { text: "450 years", correct: true },
+            { text: "10 years", correct: false },
+            { text: "105 years", correct: false }
         ]
     },
     {
-        question: "I ____ a happy person.",
+        question: "What country has the best recycling rate in the world ?",
         answers: [
-            { text: "is", correct: false },
-            { text: "were", correct: false },
-            { text: "are", correct: false },
-            { text: "am", correct: true }
+            { text: "Japan", correct: false },
+            { text: "USA", correct: false },
+            { text: "Brazil", correct: false },
+            { text: "Germany", correct: true }
         ]
     },
     {
-        question: "My brother ____ play the piano when he was 5.",
+        question: "What is the green recycling bin for in the UK ?",
         answers: [
-            { text: "was able to", correct: true },
-            { text: "can't", correct: false },
-            { text: "will be able to", correct: false },
-            { text: "did could", correct: false }
+            { text: "Glass", correct: true },
+            { text: "Cartoon", correct: false },
+            { text: "Paper", correct: false },
+            { text: "Books", correct: false }
         ]
     },
     {
-        question: "Shakespeare was a famous playwright ____ wrote Romeo and Juliet.",
+        question: "What part of a computer is the most difficult to recycle ?",
         answers: [
-            { text: "which", correct: false },
-            { text: "who", correct: true },
-            { text: "when", correct: false },
-            { text: "whose", correct: false }
+            { text: "Screen", correct: false },
+            { text: "Battery", correct: true },
+            { text: "Mouse", correct: false },
+            { text: "keyboard", correct: false }
         ]
     },
     {
-        question: "I've ____ finished a really good book.",
+        question: "What is the advantage of recycling ?",
         answers: [
-            { text: "yet", correct: false },
-            { text: "about", correct: false },
-            { text: "just", correct: true },
-            { text: "still", correct: false }
+            { text: "Spend less time taking the garbage out", correct: false },
+            { text: "Avoid wasting water", correct: false },
+            { text: "Create a healthier planet for ourselves and future generations", correct: true },
+            { text: "There is no advantage", correct: false }
         ]
     },
     {
-        question: "Lee is good ____ playing bass.",
+        question: "How much waste is generated per person per day?",
         answers: [
-            { text: "at", correct: true },
-            { text: "with", correct: false },
-            { text: "in", correct: false },
-            { text: "on", correct: false }
+            { text: "740 grams", correct: true },
+            { text: "2 kilograms", correct: false },
+            { text: "1 ton", correct: false },
+            { text: "5 kiligrams", correct: false }
         ]
     },
     {
-        question: "I was so ____ to see him. He wasn't supposed to be here.",
+        question: "What is the most recycled material in the world ?",
         answers: [
-            { text: "surprising", correct: false },
-            { text: "surprisly", correct: false },
-            { text: "surprised", correct: true },
-            { text: "surprisable", correct: false }
-        ]
-    },
-    {
-        question: "Three men ____ after the incident.",
-        answers: [
-            { text: "was arrested", correct: false },
-            { text: "arrested", correct: false },
-            { text: "were arrested", correct: true },
-            { text: "were being arrested", correct: false }
-        ]
-    },
-    {
-        question: "I would rather ____ home than go out",
-        answers: [
-            { text: "staying", correct: false },
-            { text: "to stay", correct: false },
-            { text: "stayed", correct: false },
-            { text: "stay ", correct: true }
-        ]
-    },
-    {
-        question: "Tell me your secreat, I ____ tell anyone !",
-        answers: [
-            { text: "'m going to'", correct: false },
-            { text: "'m not'", correct: false },
-            { text: "will", correct: false },
-            { text: "won't", correct: true }
+            { text: "paper and carton", correct: false },
+            { text: "water", correct: false },
+            { text: "Iron and steel", correct: true },
+            { text: "glass and food", correct: false }
         ]
     }
 ]
