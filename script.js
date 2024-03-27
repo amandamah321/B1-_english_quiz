@@ -125,7 +125,7 @@ function finishGame() {
         <br>
         <button  class="button" onclick= window.location.reload()>Start Over</button>
         <p>
-        <a class='link' href="https://www.greenpeace.org/usa/">Learn more about recycling</a>
+        <a class='link' href="https://www.greenpeace.org/usa/" target="_blank">Learn more about recycling</a>
         </p>
     `
 }
